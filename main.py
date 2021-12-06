@@ -4,6 +4,8 @@ import smtplib
 from scraper import WebScraper
 import json
 
+email = 'sntest20@gmail.com'
+password = 'Srautharsh19$'
 # region parameters setup
 dt = datetime.datetime.today()
 months = ["January",
@@ -42,3 +44,5 @@ with open('menu.json', 'r') as file:
   food_items = menu_json[month][day]
 
 #configure smtp settings
+with smtplib.SMPT('smtp.gmail.com') as connection:
+  
