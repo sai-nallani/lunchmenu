@@ -1,11 +1,13 @@
 import datetime
-import pprint
 import smtplib
 from scraper import WebScraper
 import json
+import platform
 
-email = 'sntest20@gmail.com'
+os = platform.system()
+email = 'sntest20+2@gmail.com'
 password = 'Srautharsh19$'
+
 # region parameters setup
 dt = datetime.datetime.today()
 months = ["January",
@@ -21,9 +23,14 @@ months = ["January",
           "November",
           "December"]
 month = months[dt.month - 1]
-day = dt.strftime("%A %#d")
+
+if os != 'Windows':
+  day = dt.strftime("%A %-d")
+else:
+  day = dt.strftime("%A %#d")
+
 school_value = "7001"
-recipient_emails = ['sai.s.nallani@gmail.com', 'krishnamohan.nallani@gmail.com', 'deepthinch@gmail.com']
+recipient_emails = ['sai.s.nallani@gmail.com','123nehanayak@gmail.com', 'akilshaik08@gmail.com', 'saraswatbhowmik@gmail.com', 'dannyblue018@gmail.com', 'sabinoliz12@gmail.com', 'ayushi.patnaik111@gmail.com', 'anastasiia.temnenko@gmail.com']
 
 
 # endregion
