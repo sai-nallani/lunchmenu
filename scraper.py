@@ -1,18 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.options import Options
 import time
 
-# region Set Up
-url = "file:///C:/Users/saisn/Downloads/Menu%20Calendar.html"
-driver = webdriver.Chrome("C:/02-Happy/chromedriver.exe")
-driver.get(url)
 
-
-# endregion
 
 class WebScraper():
     def __init__(self):
+        time.sleep(1)
+        url = "file:///C:/Users/saisn/Downloads/Menu%20Calendar.html"
+        driver = webdriver.Chrome("C:/02-Happy/chromedriver.exe")
+        driver.get(url)
         time.sleep(1)
 
     def set_parameters(self, school_value, month, menu):
